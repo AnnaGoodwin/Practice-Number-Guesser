@@ -1,0 +1,111 @@
+body {
+  font-family: Open Sans, sans-serif;
+}
+header {
+  background-color: #404041;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+header h1 {
+  color: #DD1972;
+  display: inline-block;
+  font-size: 80px;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+header h3 {
+  color: #ffffff;
+  font-weight: 300;
+  width: 100%;
+  border-bottom: 1px solid #ffffff;
+  margin: 10px 0 20px;
+}
+h3 span {
+  background: #404041;
+  padding: 0, 10px;
+}
+.content {
+  display: flex;
+  background-color: #404041;
+  
+}
+.section1 {
+  display: flex;
+  justify-content:center;
+  align-content: space-around;
+  background-color: #F7F7F7;
+  flex-direction: column;
+  height: 100vh;
+  flex: 1;
+
+}
+.box1 {
+  border: solid 1px;
+  height: 25%;
+  width: 90%;
+
+}
+button {
+  background-color: #6E6E6E;
+  color: #FFFFFF;
+  border: solid;
+  border-color: #f7f7f7;
+  border-radius: 70px;
+  padding: 2%;
+}
+.disabled {
+  opacity: 0.6;
+  background-color: #d0d2d3;
+  cursor: not-allowed;
+}
+#update {
+  width: 20%;
+}
+.box2 {
+  border: solid 1px;
+  height: 40%;
+  width: 90%;
+
+}
+.box3 {
+
+
+}
+.current-guess-1,
+.current-guess-2 {
+  width: 50%;
+}
+.current-guess-1 h1,
+.current-guess-2 h1 {
+  color:#DD1972;
+
+}
+.section2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: space-around;
+  flex-wrap: wrap;
+  height: 100vh;
+  background-color: #D1D2D4;
+  flex: 1;
+}
+.box4,
+.box5,
+.box6 {
+  width: 80%;
+  border: solid 1px;
+  background-color: #F7F7F7;
+  height: 20%;
+  margin: 15px;
+
+}
+button .close {
+  border-radius: 50%;
+  height: 2px;
+  float: right;
+}

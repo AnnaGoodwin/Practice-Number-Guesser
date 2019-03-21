@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Guesser</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"/>
+</head>
+<body>
+    <header>
+      <h1><b>NUMBER</b>GUESSER</h1>
+      <h3><span>ULTIMATE CHALLENGER EDITION</span></h3>
+    </header>
+    <div class="content">
+    <section class="section1">
+      <div class="box box1">
+        <p><b>Set Range</b></p>
+        <label for="min-range">Min Range</label>
+        <input type="text" id="min-range-input"/>
+        <label for="max-range">Max Range</label>
+        <input type="text" id="max-range-input"/>
+        <button id="update">UPDATE</button>
+      </div>
+      <div class="box box2">
+        <p>The Current Range is <span id="min-range-display"> 1 </span> to <span id="max-range-display">100</span></p>
+        <p>Challenger 1</p>
+        <label for="challenger1">Name</label>
+        <input type="text" name="name" id="challenger1">
+        <label for="guess1">Guess</label>
+        <input type="text" name="guess" id="guess1">
+        <label for="challenger2">Name</label>
+        <input type="text" name="name" id="challenger2">
+        <label for="guess2">Guess</label>
+        <input type="text" name="guess" id="guess2">
+        <button id="submit">SUBMIT GUESS</button>
+        <button class="disabled" id="reset">RESET GAME</button>
+        <button class ="disabled" id ="clear">CLEAR GAME</button>
+      </div>
+      <div class="box box3">
+          <div class=current-guess-1>
+             <p>Latest Score</p>
+        <p>Challenger 1 Name</p>
+        <p>current guess</p>
+        <h1 class="left-big-number">97</h1>
+        <p>That's too high!</p>
+          </div>
+          <div class="current-guess-2">
+        <p>Challenger 2 Name</p>
+        <p>current guess</p>
+        <h1 class="right-big-number">3</h1>
+        <p>That's too low!</p>
+        </div>
+      </div>
+    </section>
+    <section class="section2">
+      <div class="box box4">
+        <h4>CHALLENGER 1 NAME VS CHALLENGER 2 NAME</h4>
+        <h2>CHALLENGER 2 NAME</h2>
+        <h2>WINNER</h2>
+        <hr/>
+        <p>47 GUESSES <span>1.35 MINUTES</span> <button class="close">X</button></p>
+      </div>
+      <div class="box box5">
+        <h4>CHALLENGER 1 NAME VS CHALLENGER 2 NAME</h4>
+        <h2>CHALLENGER 1 NAME</h2>
+        <h2>WINNER</h2>
+        <hr/>
+        <p>23 GUESSES <span>.5 MINUTES</span> <button class="close">X</button></p>
+            
+      </div>
+      <div class="box box6">
+        <h4>CHALLENGER 1 NAME VS CHALLENGER 2 NAME</h4>
+            <hr/>
+        <h2>CHALLENGER 1 NAME</h2>
+        <h2>WINNER</h2>
+        <hr/>
+        <p>1675 GUESSES <span>3.5 MINUTES</span> <button class="close">X</button></p>
+      </div>
+    </section>
+</div>
+</body>
+  <script src="main.js"></script>
+</html>
