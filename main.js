@@ -28,6 +28,10 @@ submitButton.addEventListener("click", function() {
 
 });
 
+function getRandomNumSecret(min, max) {
+	min = Math.ceil(userInput).value;
+	max = Math.floor(userInput2).value;
+	return Math.floor(Math.random() * (max - min + 1)) + min;
 
 
 // var challengerOneName =
