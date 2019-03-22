@@ -7,12 +7,17 @@ var numInput1 = document.querySelector("#guess1");
 var numInput2 = document.querySelector("#guess2");
 var leftBigNumber = document.querySelector(".left-big-number");
 var rightBigNumber = document.querySelector(".right-big-number");
+var challenger1NameDisplay = document.querySelector(".challenger1-name-display");
+var challenger2NameDisplay = document.querySelector(".challenger2-name-display");
+var challenger1NameInput = document.querySelector("#challenger1");
+var challenger2NameInput = document.querySelector("#challenger2")
 var submitButton = document.querySelector("#submit");
 var randomNum = 0;
 var clearButton = document.querySelector("#clear");
 var resetButton = document.querySelector("#reset");
 var challengerOneResults = document.querySelector("challenger-1-results");
 var challengerTwoResults = document.querySelector("challenger-2-results");
+
 
 
 
@@ -31,6 +36,10 @@ update.addEventListener("click", function() {
 submitButton.addEventListener("click", function() {
   leftBigNumber.innerText = numInput1.value;
   rightBigNumber.innerText = numInput2.value;
+
+  challenger1NameDisplay.innerText = challenger1NameInput.value;
+  challenger2NameDisplay.innerText = challenger2NameInput.value;
+
   clearButton.classList.remove("disabled");
   resetButton.classList.remove("disabled");
   if(parseInt(numInput1.value) < randomNum) {
@@ -47,6 +56,7 @@ resetButton.addEventListener("click", function() {
   clearButton.classList.add("disabled");
   resetButton.classList.add("disabled");
   resetGame();
+
 });
 
 function resetGame() {
@@ -68,6 +78,9 @@ function getRandomNumSecret(min, max) {
 	min = Math.ceil(min);
 	max = Math.floor(max);
 	return Math.floor(Math.random() * (max - min + 1)) + min;
+submit-feature
+}
+=======
 };
 
 
@@ -90,3 +103,4 @@ function getRandomNumSecret(min, max) {
 
 // var getUserInputButton = 
 // document.querySelector =()
+ master
