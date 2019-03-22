@@ -33,6 +33,26 @@ submitButton.addEventListener("click", function() {
   resetButton.classList.remove("disabled");
 });
 
+resetButton.addEventListener("click", function() {
+  clearButton.classList.add("disabled");
+  resetButton.classList.add("disabled");
+  resetGame();
+  //need to clear name input fields//
+});
+
+function resetGame() {
+	clearGame();
+	return;
+
+};
+function clearGame() {
+  userInput.value = "";
+  userInput2.value = "";
+  numInput1.value = "";
+  numInput2.value = "";
+  return;
+};
+
 function getRandomNumSecret(min, max) {
 	min = Math.ceil(min);
 	max = Math.floor(max);
