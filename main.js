@@ -9,6 +9,8 @@ var leftBigNumber = document.querySelector(".left-big-number");
 var rightBigNumber = document.querySelector(".right-big-number");
 var submitButton = document.querySelector("#submit");
 var randomNum = 0;
+var clearButton = document.querySelector("#clear");
+var resetButton = document.querySelector("#reset");
 
 
 
@@ -27,7 +29,8 @@ update.addEventListener("click", function() {
 submitButton.addEventListener("click", function() {
   leftBigNumber.innerText = numInput1.value;
   rightBigNumber.innerText = numInput2.value;
-
+  clearButton.classList.remove("disabled");
+  resetButton.classList.remove("disabled");
 });
 
 function getRandomNumSecret(min, max) {
