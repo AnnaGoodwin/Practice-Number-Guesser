@@ -74,10 +74,16 @@ function clearGame() {
   userInput2.value = "";
   numInput1.value = "";
   numInput2.value = ""; 
+  challenger1NameInput.value = "";
+  challenger2NameInput.value = "";
   leftBigNumber.innerText = "--";
   rightBigNumber.innerText ="--";
   challengerOneResults.innerText ="Results";
-  challengerTwoResults.innerTest = "Results";
+  challengerTwoResults.innerText = "Results";
+  challenger1NameDisplay.innerText = "Challenger 1 Name";
+  challenger2NameDisplay.innerText = "Challenger 2 Name";
+  minRange.innerText = "1";
+  maxRange.innerText = "100";
   return;
 };
 
