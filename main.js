@@ -49,7 +49,7 @@ function clearGame() {
   userInput.value = "";
   userInput2.value = "";
   numInput1.value = "";
-  numInput2.value = "";
+  numInput2.value = ""; 
   return;
 };
 
