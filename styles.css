@@ -62,6 +62,7 @@ button {
   background-color: #d0d2d3;
   cursor: not-allowed;
 }
+
 #update {
   width: 20%;
 }
@@ -77,7 +78,9 @@ button {
 }
 .current-guess-1,
 .current-guess-2 {
-  width: 50%;
+  width: 45%;
+  display: inline-block;
+
 }
 .current-guess-1 h1,
 .current-guess-2 h1 {
@@ -94,9 +97,7 @@ button {
   background-color: #D1D2D4;
   flex: 1;
 }
-.box4,
-.box5,
-.box6 {
+.box4 {
   width: 80%;
   border: solid 1px;
   background-color: #F7F7F7;
