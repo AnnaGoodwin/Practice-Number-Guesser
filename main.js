@@ -8,6 +8,7 @@ var numInput2 = document.querySelector("#guess2");
 var leftBigNumber = document.querySelector(".left-big-number");
 var rightBigNumber = document.querySelector(".right-big-number");
 var submitButton = document.querySelector("#submit");
+var randomNum = 0;
 
 
 
@@ -18,7 +19,8 @@ update.addEventListener("click", function() {
   var changeMaxRange = userInput2.value;
   maxRange.innerHTML = changeMaxRange;
   console.log(userInput2.value);
-
+  randomNum = getRandomNumSecret(changeMinRange, changeMaxRange);
+  console.log(randomNum);
 });
 
 
@@ -29,9 +31,10 @@ submitButton.addEventListener("click", function() {
 });
 
 function getRandomNumSecret(min, max) {
-	min = Math.ceil(userInput).value;
-	max = Math.floor(userInput2).value;
+	min = Math.ceil(min);
+	max = Math.floor(max);
 	return Math.floor(Math.random() * (max - min + 1)) + min;
+};
 
 
 // var challengerOneName =
