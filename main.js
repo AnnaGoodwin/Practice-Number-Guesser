@@ -59,8 +59,10 @@ function clearGame() {
   userInput2.value = "";
   numInput1.value = "";
   numInput2.value = ""; 
-  leftBigNumber.innerText = "--"
-  rightBigNumber.innerText ="--"
+  leftBigNumber.innerText = "--";
+  rightBigNumber.innerText ="--";
+  challengerOneResults.innerText ="Results";
+  challengerTwoResults.innerTest = "Results";
   return;
 };
 

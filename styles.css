@@ -55,7 +55,8 @@ button {
   border: solid;
   border-color: #f7f7f7;
   border-radius: 70px;
-  padding: 2%;
+  padding: 1%;
+  width: 125px;
 }
 .disabled {
   opacity: 0.6;
@@ -98,15 +99,17 @@ button {
   flex: 1;
 }
 .box4 {
-  width: 80%;
+  width: 95%;
   border: solid 1px;
   background-color: #F7F7F7;
-  height: 20%;
+  height: 30%;
   margin: 15px;
+  text-align: center;
 
 }
-button .close {
+#close {
   border-radius: 50%;
-  height: 2px;
+  height: 8%;
   float: right;
+  width: 8%;
 }
