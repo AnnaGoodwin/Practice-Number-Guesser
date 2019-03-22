@@ -36,10 +36,8 @@ update.addEventListener("click", function() {
 submitButton.addEventListener("click", function() {
   leftBigNumber.innerText = numInput1.value;
   rightBigNumber.innerText = numInput2.value;
-
   challenger1NameDisplay.innerText = challenger1NameInput.value;
   challenger2NameDisplay.innerText = challenger2NameInput.value;
-
   clearButton.classList.remove("disabled");
   resetButton.classList.remove("disabled");
   if(parseInt(numInput1.value) < randomNum) {
@@ -48,6 +46,13 @@ submitButton.addEventListener("click", function() {
   	challengerOneResults.innerHTML = "BOOM!";
   } else {
   	challengerOneResults.innerHTML = "That's too high!";
+  }
+  if(parseInt(numInput2.value) > randomNum) {
+    challengerTwoResults.innerHTML = "That's too high!";
+  } else if(parseInt(numInput2.value) < randomNum) {
+    challengerTwoResults.innerHTML = "That's too low!";
+  } else {
+    challengerTwoResults.innerHTML = "BOOM!";
   }
 
 });
@@ -80,29 +85,4 @@ function getRandomNumSecret(min, max) {
 	min = Math.ceil(min);
 	max = Math.floor(max);
 	return Math.floor(Math.random() * (max - min + 1)) + min;
-submit-feature
-}
-=======
 };
-
-
-// var challengerOneName =
-// document.querySelector("#challenger1");
-// var challengerOneText =
-// document.querySelector("#guess1");
-// var challengerTwo = 
-// document.querySelector("#challenger2");
-// var challengerTwoGuess =
-// document.querySelector("#guess2");
-// var getUserNameGuessButton = 
-// document.querySelector("#submit");
-
-// getUserNameGuessButton.addEventListener("click",
-//   function () {
-//     var guesses = challengerOneName.value;
-//     console.log(guesses)
-//   }
-
-// var getUserInputButton = 
-// document.querySelector =()
- master
