@@ -55,13 +55,15 @@ button {
   border: solid;
   border-color: #f7f7f7;
   border-radius: 70px;
-  padding: 2%;
+  padding: 1%;
+  width: 125px;
 }
 .disabled {
   opacity: 0.6;
   background-color: #d0d2d3;
   cursor: not-allowed;
 }
+
 #update {
   width: 20%;
 }
@@ -77,7 +79,9 @@ button {
 }
 .current-guess-1,
 .current-guess-2 {
-  width: 50%;
+  width: 45%;
+  display: inline-block;
+
 }
 .current-guess-1 h1,
 .current-guess-2 h1 {
@@ -94,18 +98,18 @@ button {
   background-color: #D1D2D4;
   flex: 1;
 }
-.box4,
-.box5,
-.box6 {
-  width: 80%;
+.box4 {
+  width: 95%;
   border: solid 1px;
   background-color: #F7F7F7;
-  height: 20%;
+  height: 30%;
   margin: 15px;
+  text-align: center;
 
 }
-button .close {
+#close {
   border-radius: 50%;
-  height: 2px;
+  height: 8%;
   float: right;
+  width: 8%;
 }

@@ -15,8 +15,8 @@ var submitButton = document.querySelector("#submit");
 var randomNum = 0;
 var clearButton = document.querySelector("#clear");
 var resetButton = document.querySelector("#reset");
-var challengerOneResults = document.querySelector("challenger-1-results");
-var challengerTwoResults = document.querySelector("challenger-2-results");
+var challengerOneResults = document.querySelector("#challenger-1-results");
+var challengerTwoResults = document.querySelector("#challenger-2-results");
 
 
 
@@ -69,8 +69,10 @@ function clearGame() {
   userInput2.value = "";
   numInput1.value = "";
   numInput2.value = ""; 
-  leftBigNumber.innerText = "--"
-  rightBigNumber.innerText ="--"
+  leftBigNumber.innerText = "--";
+  rightBigNumber.innerText ="--";
+  challengerOneResults.innerText ="Results";
+  challengerTwoResults.innerTest = "Results";
   return;
 };
 
