@@ -11,6 +11,8 @@ var submitButton = document.querySelector("#submit");
 var randomNum = 0;
 var clearButton = document.querySelector("#clear");
 var resetButton = document.querySelector("#reset");
+var challengerOneResults = document.querySelector("challenger-1-results");
+var challengerTwoResults = document.querySelector("challenger-2-results");
 
 
 
@@ -31,13 +33,20 @@ submitButton.addEventListener("click", function() {
   rightBigNumber.innerText = numInput2.value;
   clearButton.classList.remove("disabled");
   resetButton.classList.remove("disabled");
+  if(parseInt(numInput1.value) < randomNum) {
+  	challengerOneResults.innerHTML = "That's too low!";
+  } else if(parseInt(numInput1.value) === randomNum) {
+  	challengerOneResults.innerHTML = "BOOM!";
+  } else {
+  	challengerOneResults.innerHTML = "That's too high!";
+  }
+
 });
 
 resetButton.addEventListener("click", function() {
   clearButton.classList.add("disabled");
   resetButton.classList.add("disabled");
   resetGame();
-  //need to clear name input fields//
 });
 
 function resetGame() {
@@ -50,6 +59,8 @@ function clearGame() {
   userInput2.value = "";
   numInput1.value = "";
   numInput2.value = ""; 
+  leftBigNumber.innerText = "--"
+  rightBigNumber.innerText ="--"
   return;
 };
 
