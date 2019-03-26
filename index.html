@@ -4,63 +4,74 @@
   <title>Number Guesser</title>
   <link rel="stylesheet" href="styles.css">
   <meta charset="UTF-8"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+  
 </head>
 <body>
-    <header>
-      <h1><b>NUMBER</b>GUESSER</h1>
-      <h3><span>ULTIMATE CHALLENGER EDITION</span></h3>
-    </header>
-    <div class="content">
+  <header>
+    <h1><b>NUMBER</b>GUESSER</h1>
+    <h3><span>ULTIMATE CHALLENGER EDITION</span></h3>
+  </header>
+  <div class="content">
     <section class="section1">
-      <div class="box box1">
-        <p><b>Set Range</b></p>
-        <label for="min-range">Min Range</label>
-        <input type="number" id="min-range-input"/>
-        <label for="max-range">Max Range</label>
-        <input type="number" id="max-range-input"/>
-        <button id="update">UPDATE</button>
-      </div>
-      <div class="box box2">
-        <p>The Current Range is <span id="min-range-display"> 1 </span> to <span id="max-range-display">100</span></p>
-        <p>Challenger 1</p>
-        <label for="challenger1">Name</label>
-        <input type="text" name="name" id="challenger1">
-        <label for="guess1">Guess</label>
-        <input type="number" name="guess" id="guess1">
-        <label for="challenger2">Name</label>
-        <input type="text" name="name" id="challenger2">
-        <label for="guess2">Guess</label>
-        <input type="number" name="guess" id="guess2">
-        <button id="submit">SUBMIT GUESS</button>
-        <button class="disabled" id="reset">RESET GAME</button>
-        <button class ="disabled" id ="clear">CLEAR GAME</button>
-      </div>
-      <div class="box box3">
-          <div class=current-guess-1>
-             <p>Latest Score</p>
-        <p class="challenger1-name-display">Challenger 1 Name</p>
-        <p>current guess</p>
-        <h1 class="left-big-number">--</h1>
-        <p id="challenger-1-results">Results</p>
-          </div>
-          <div class="current-guess-2">
-        <p class="challenger2-name-display">Challenger 2 Name</p>
-        <p>current guess</p>
-        <h1 class="right-big-number">--</h1>
-        <p id ="challenger-2-results">Results</p>
+      <form id="user-guess-form">
+        <div class="box box1">
+          <p class = "bold-font">Set Range</p>
+          <label for="min-range">Min Range</label>
+          <input type="number" name="minrangeinput" id="minrangeinput"/>
+          <label for="max-range">Max Range</label>
+          <input type="number" name="maxrangeinput" id="maxrangeinput"/>
+          <button type ="button" id="update">UPDATE</button>
         </div>
+        <div class="box box2">
+          <p>The Current Range is <span class ="bold-font" id="min-range-display"><u> 1 </u></span> to <span class ="bold-font" id="max-range-display"><u>100</u></span></p>
+          <p class="bold-font">Challenger 1</p>
+          <label for="challenger1">Name</label>
+          <input type="text" name="challenger1" id="challenger1">
+          <label for="guess1">Guess</label>
+          <input type="number" name="guess1" id="guess1">
+          <p class="bold-font">Challenger 2</p>
+          <label for="challenger2">Name</label>
+          <input type="text" name="challenger2" id="challenger2">
+         <!--  <span class="hidden" id="name-error-1"> Enter a name</span> -->
+          <label for="guess2">Guess</label>
+          <input type="number" name="guess2" id="guess2">
+          <br/>
+          <button type="button" id="submit">SUBMIT GUESS</button>
+          <button type="button" class="disabled" id="reset">RESET GAME</button>
+          <button type ="button" class ="disabled" id ="clear">CLEAR GAME</button>
+        </div>
+      </form>
+      <div class="box box3">
+        <div class=current-guess-1>
+         <p class = "bold-font">Latest Score</p>
+         <p class="challenger1-name-display bold-font">Challenger 1 Name</p>
+         <p>current guess</p>
+         <p class="left-big-number results">--</p>
+         <p id="challenger-1-results">Results</p>
+       </div>
+       <div class="current-guess-2">
+        <p class="challenger2-name-display bold-font">Challenger 2 Name</b></p>
+        <p>current guess</p>
+        <p class="right-big-number results">--</p>
+        <p id ="challenger-2-results">Results</p>
       </div>
-    </section>
-    <section class="section2">
-      <div class="box box4">
-        <h4>CHALLENGER 1 NAME VS CHALLENGER 2 NAME</h4>
-        <h2>CHALLENGER 2 NAME</h2>
-        <h2>WINNER</h2>
-        <hr/>
-        <p>47 GUESSES <span>1.35 MINUTES</span> <button id="close">X</button></p>
-      </div>
-    </section>
+    </div>
+  </section>
+  <section class="section2">
+    <div class="box box4">
+      <h4>CHALLENGER 1 NAME VS CHALLENGER 2 NAME</h4>
+      <h2>CHALLENGER 2 NAME</h2>
+      <h2>WINNER</h2>
+      <hr/>
+      <p>47 GUESSES <span>1.35 MINUTES</span> <button id="close">X</button></p>
+    </div>
+  </section>
 </div>
 </body>
-  <script src="main.js"></script>
+<!--<script src="js/jquery-validation-1.19⁩/lib/jquery-1.11.1.js"></script>-->
+<script src="main.js"></script>
+<script src="js/form-validation.js"></script>
 </html>
