@@ -6,6 +6,7 @@ header {
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   font-family: sans-serif;
   font-weight: lighter;
@@ -16,6 +17,7 @@ header h1 {
   font-size: 80px;
   font-weight: 300;
   font-family: sans-serif;
+
 }
 header h3 {
   color: #ffffff;
@@ -24,7 +26,24 @@ header h3 {
   border-bottom: 1px solid #ffffff;
   margin: 10px 0 20px;
 }
-h3 span {
+.background{
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    border-top: 2px solid #ffffff;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 95%;
+    z-index: -1;
+}
+}
+.subtitle {
   background: #404041;
   padding: 0, 10px;
 }
@@ -122,19 +141,19 @@ button {
   height: 30%;
   margin: 15px;
   text-align: center;
-  display: none;
 
 }
+
 #close {
   border-radius: 50%;
-  height: 8%;
+  height: 3em;
   float: right;
-  width: 8%;
+  width: 3em;
 }
 
 .hidden {
   display: none;
-  color: #DD1972 ;
+
 }
 
 form .error {

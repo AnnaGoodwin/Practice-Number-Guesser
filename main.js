@@ -18,11 +18,16 @@ var clearButton = document.querySelector("#clear");
 var resetButton = document.querySelector("#reset");
 var challengerOneResults = document.querySelector("#challenger-1-results");
 var challengerTwoResults = document.querySelector("#challenger-2-results");
+var winnerCard = document.querySelector(".box4");
+var winnerName = document.querySelector("#winner-name");
+var cardName1 = document.querySelector("#challenger1-name");
+var cardName2 = document.querySelector("#challenger2-name");
+var closeButton = document.querySelector("#close");
 
 var changeMinRange = 1;
 var changeMaxRange = 100;
 
-
+//event listener to update "Current Range" and generate random nunber//
 update.addEventListener("click", function() {
   changeMinRange = parseInt(userInput.value);
   minRange.innerHTML = changeMinRange;
@@ -32,59 +37,62 @@ update.addEventListener("click", function() {
   console.log(userInput2.value);
   randomNum = getRandomNumSecret(changeMinRange, changeMaxRange);
   console.log(randomNum);
-  //update range values for range rule in validation function
+  //rules to restrict input//
+  $( "#minrangeinput" ).rules( "add", {
+  required: true,
+  max: changeMaxRange,
+  messages: {
+    required: "Required input",
+    max: "Enter a number smaller than " + changeMaxRange
+    }
+  });
+ 
+  $( "#maxrangeinput" ).rules( "add", {
+  required: true,
+  min: changeMinRange,
+  messages: {
+    required: "Required input",
+    min: "Enter a number greater than " + changeMinRange
+    }
+  });
+
   $( "#guess1" ).rules( "add", {
   required: true,
   range: [changeMinRange, changeMaxRange],
   messages: {
-    required: "Required input",
-    // range: jQuery.validator.format("Enter a number between {0} and {1}")
+    required: "Required input"
     }
   });
+
   $( "#guess2" ).rules( "add", {
   required: true,
   range: [changeMinRange, changeMaxRange],
   messages: {
-    required: "Required input",
+    required: "Required input"
    }
   });
 });
 
-
-// submitButton.addEventListener("click", function() {
-//   // leftBigNumber.innerText = numInput1.value;
-//   rightBigNumber.innerText = numInput2.value;
-//   challenger1NameDisplay.innerText = challenger1NameInput.value;
-//   challenger2NameDisplay.innerText = challenger2NameInput.value;
-//   clearButton.classList.remove("disabled");
-//   resetButton.classList.remove("disabled");
-//   if(parseInt(numInput1.value) < randomNum) {
-//   	challengerOneResults.innerHTML = "That's too low!";
-//   } else if(parseInt(numInput1.value) === randomNum) {
-//   	challengerOneResults.innerHTML = "BOOM!";
-//   } else {
-//   	challengerOneResults.innerHTML = "That's too high!";
-//   }
-//  if(parseInt(numInput2.value) < randomNum) {
-//     challengerTwoResults.innerHTML = "That's too low!";
-//   } else if(parseInt(numInput2.value) === randomNum) {
-//     challengerTwoResults.innerHTML = "BOOM!";
-//   } else {
-//     challengerTwoResults.innerHTML = "That's too high!";
-//   }
-//   if(challenger1NameInput.value === undefined) {
-//     nameError1.classList.remove("hidden")
-//   }
-
-// });
-
+//event listener to clear out game input and reset game//
 resetButton.addEventListener("click", function() {
   clearButton.classList.add("disabled");
   resetButton.classList.add("disabled");
+  winnerCard.classList.add('hidden')
   resetGame();
 
 });
 
+//event listener to clear game input//
+clearButton.addEventListener("click", function() {
+  clearButton.classList.add("disabled");
+  clearGame();
+
+});
+
+closeButton.addEventListener("click", function () {
+  winnerCard.classList.add('hidden')
+});
+//functions to reset and clear, called in above event listeners ^//
 function resetGame() {
 	clearGame();
 	return;
@@ -105,6 +113,7 @@ function clearGame() {
   challenger2NameDisplay.innerText = "Challenger 2 Name";
   minRange.innerText = "1";
   maxRange.innerText = "100";
+  randomNum = ""
   return;
 };
 
