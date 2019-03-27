@@ -4,6 +4,7 @@
   <title>Number Guesser</title>
   <link rel="stylesheet" href="styles.css">
   <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
   <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
@@ -18,56 +19,65 @@
     <section class="section1">
       <form id="user-guess-form">
         <div class="box box1">
-          <p class = "bold-font">Set Range</p>
-          <label for="min-range">Min Range</label>
-          <input type="number" name="minrangeinput" id="minrangeinput"/>
-          <label for="max-range">Max Range</label>
-          <input type="number" name="maxrangeinput" id="maxrangeinput"/>
-          <button type ="button" id="update">UPDATE</button>
-        </div>
+        <div class="box-1-column1">
+         <p class = "bold-font">Set Range</p>
+          <p for="min-range" name="min-range">Min Range</p>
+              <input type="number" name="min-range" class="input-box" id="minrangeinput"/>
+            </div>
+            <div class="box-1-column2">
+              <p for="max-range" name="max-range">Max Range</p>
+              <input type="number" name="max-range" class= "input-box" id="maxrangeinput"/>
+            </div>
+            <div class ="box-1-column3">
+              <button type ="button" id="update">UPDATE</button>
+            </div>
+          </div>
         <div class="box box2">
-          <p>The Current Range is <span class ="bold-font" id="min-range-display"><u> 1 </u></span> to <span class ="bold-font" id="max-range-display"><u>100</u></span></p>
-          <p class="bold-font">Challenger 1</p>
-          <label for="challenger1">Name</label>
-          <input type="text" name="challenger1" id="challenger1">
-          <label for="guess1">Guess</label>
-          <input type="number" name="guess1" id="guess1">
-          <p class="bold-font">Challenger 2</p>
-          <label for="challenger2">Name</label>
-          <input type="text" name="challenger2" id="challenger2">
-         <!--  <span class="hidden" id="name-error-1"> Enter a name</span> -->
-          <label for="guess2">Guess</label>
-          <input type="number" name="guess2" id="guess2">
-          <br/>
-          <button type="button" id="submit">SUBMIT GUESS</button>
-          <button type="button" class="disabled" id="reset">RESET GAME</button>
-          <button type ="button" class ="disabled" id ="clear">CLEAR GAME</button>
+          <div class = "box-2-content">
+            <p>The Current Range is <span class ="bold-font" id="min-range-display"><u>1</u></span> to <span class ="bold-font" id="max-range-display"><u>100</u></span></p>
+            <p class="bold-font">Challenger 1</p>
+              <label for="challenger1">Name</label>
+                <input type="text" class="input-box" name="challenger1" id="challenger1">
+              <label for="guess1">Guess</label>
+                <input type="number" class="input-box" name="guess1" id="guess1">
+            <p class="bold-font">Challenger 2</p>
+              <label for="challenger2">Name</label>
+                <input type="text" class="input-box" name="challenger2" id="challenger2">
+              <label for="guess2">Guess</label>
+                <input type="number" class="input-box" name="guess2" id="guess2">
+                <br/>
+          <div class ="button-container">
+            <button type="button" id="submit">SUBMIT GUESS</button>
+            <button type="button" class="disabled" id="reset">RESET GAME</button>
+            <button type ="button" class ="disabled" id ="clear">CLEAR GAME</button>
+          </div>
+          </div>
         </div>
       </form>
       <div class="box box3">
+        <p class = "bold-font score">Latest Score</p>
         <div class=current-guess-1>
-         <p class = "bold-font">Latest Score</p>
-         <p class="challenger1-name-display bold-font">Challenger 1 Name</p>
-         <p>current guess</p>
-         <p class="left-big-number results">--</p>
-         <p id="challenger-1-results">Results</p>
+           <p class="challenger1-name-display bold-font">Challenger 1 Name</p>
+           <p>current guess</p>
+           <p class="left-big-number results">--</p>
+           <p id="challenger-1-results">Results</p>
        </div>
        <div class="current-guess-2">
-        <p class="challenger2-name-display bold-font">Challenger 2 Name</b></p>
-        <p>current guess</p>
-        <p class="right-big-number results">--</p>
-        <p id ="challenger-2-results">Results</p>
+          <p class="challenger2-name-display bold-font">Challenger 2 Name</b></p>
+          <p>current guess</p>
+          <p class="right-big-number results">--</p>
+          <p id ="challenger-2-results">Results</p>
       </div>
     </div>
   </section>
   <section class="section2">
-    <div class="box box4 hidden">
+  <!--   <div class="box box4 hidden">
       <h4><span id ="challenger1-name"> CHALLENGER 1 NAME</span> VS <span id= "challenger2-name"> CHALLENGER 2 NAME</span></h4>
       <h2 id="winner-name">Winner Name</h2>
       <h2>WINNER</h2>
       <hr/>
       <button id="close">X</button></p>
-    </div>
+    </div> -->
   </section>
 </div>
 </body>

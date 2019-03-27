@@ -18,8 +18,14 @@ var clearButton = document.querySelector("#clear");
 var resetButton = document.querySelector("#reset");
 var challengerOneResults = document.querySelector("#challenger-1-results");
 var challengerTwoResults = document.querySelector("#challenger-2-results");
-var winnerCard = document.querySelector(".box4");
-var winnerName = document.querySelector("#winner-name");
+
+
+// var winnerCard = document.querySelector(".box4");
+// var winnerName = document.querySelector("#winner-name");
+var winnerCardContainer = document.querySelector(".section2")
+var winnerCard = document.createElement("div");
+var winnerName = document.createElement("p");
+
 var cardName1 = document.querySelector("#challenger1-name");
 var cardName2 = document.querySelector("#challenger2-name");
 var closeButton = document.querySelector("#close");
@@ -89,9 +95,9 @@ clearButton.addEventListener("click", function() {
 
 });
 
-closeButton.addEventListener("click", function () {
-  winnerCard.classList.add('hidden')
-});
+// closeButton.addEventListener("click", function () {
+//   winnerCard.classList.add('hidden')
+// });
 //functions to reset and clear, called in above event listeners ^//
 function resetGame() {
 	clearGame();
