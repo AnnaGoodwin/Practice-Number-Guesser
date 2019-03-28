@@ -11,24 +11,21 @@ var challenger1NameDisplay = document.querySelector(".challenger1-name-display")
 var challenger2NameDisplay = document.querySelector(".challenger2-name-display");
 var challenger1NameInput = document.querySelector("#challenger1");
 var challenger2NameInput = document.querySelector("#challenger2");
-var nameError1 = document.querySelector("#name-error-1");
+
 var submitButton = document.querySelector("#submit");
+
 var randomNum = 0;
+
 var clearButton = document.querySelector("#clear");
 var resetButton = document.querySelector("#reset");
+
 var challengerOneResults = document.querySelector("#challenger-1-results");
 var challengerTwoResults = document.querySelector("#challenger-2-results");
-
-
-// var winnerCard = document.querySelector(".box4");
-// var winnerName = document.querySelector("#winner-name");
 var winnerCardContainer = document.querySelector(".section2")
-var winnerCard = document.createElement("div");
-var winnerName = document.createElement("p");
 
 var cardName1 = document.querySelector("#challenger1-name");
 var cardName2 = document.querySelector("#challenger2-name");
-var closeButton = document.querySelector("#close");
+// var closeButton = document.querySelector("#close");
 
 var changeMinRange = 1;
 var changeMaxRange = 100;
@@ -96,12 +93,13 @@ clearButton.addEventListener("click", function() {
 });
 
 // closeButton.addEventListener("click", function () {
-//   winnerCard.classList.add('hidden')
 // });
 //functions to reset and clear, called in above event listeners ^//
 function resetGame() {
 	clearGame();
 	return;
+
+//new function updateMinMaxRange, new var to target innerText of ranges, old.innertext = parseInt(new variable) -/+10//
 
 };
 function clearGame() {
@@ -120,6 +118,7 @@ function clearGame() {
   minRange.innerText = "1";
   maxRange.innerText = "100";
   randomNum = ""
+  winnerCard.innerHTML = "";
   return;
 };
 
@@ -129,4 +128,9 @@ function getRandomNumSecret(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 };	
 
-
+function updateMinMaxRange() {
+  var reduceMinNum = minRange.innerHTML
+  var increaseMaxNum = maxRange.innerHTML
+  reduceMinNum = parseInt(minRange.innerHTML) - 10
+  increaseMaxNum = parseInt(minRange.innerHTML) +10
+}

@@ -21,6 +21,24 @@ header h1 {
   margin: 0;
 
 }
+/*h1:before {
+  content: "";
+  display: block;
+  border-top: solid 1px black;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+h1 span {
+  background: #fff;
+  padding: 0 20px;
+  position: relative;
+  z-index: 5;
+}*/
+
 header h3 {
   color: #ffffff;
   font-weight: 300;
@@ -30,23 +48,6 @@ header h3 {
    background: #404041;
   padding: 0, 10px;
 }
-.background{
-  position: relative;
-  z-index: 1;
-
-  &:before {
-    border-top: 2px solid #ffffff;
-    content: "";
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 95%;
-    z-index: -1;
-  }
-}
 .bold-font {
   font-weight: 700;
   color: #646464;
@@ -54,35 +55,47 @@ header h3 {
 .content {
   display: flex;
   background-color: #404041;
-  
+}
+img {
+  height: 1em;
 }
 .section1 {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-content: space-around;
   background-color: #F7F7F7;
   flex-direction: column;
-  height: 100vh;
+  height: auto;
   width: 50%;
   flex: 1;
 }
+.box {
+   border: solid 2px #EAEAEA;
+   background-color: #ffffff;
+   padding: 1%;
+   margin: 5%;
+}
+.box-label {
+  margin-bottom: 0;
+  display: block;
+}
 .box1 {
-  border: solid 1px #EAEAEA;
   width: 75%;
-  height: 30%;
-  background-color: #ffffff;
-  margin: 5%;
+  height: 20%;
   display: flex;
   align-items: flex-end;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-
 .input-box {
-/*  display: inline-block;*/
- /* width: 30%;
-  height: 15%;*/
   border: solid 1px;
   border-color: #D0D2D3;
+  width: 30%;
+  height: 15%;
+  display: inline-block;
+}
+#minrangeinput,
+#maxrangeinput {
+  width: 75%;
 }
 button {
   background-color: #6E6E6E;
@@ -90,8 +103,12 @@ button {
   border: solid;
   border-color: #f7f7f7;
   border-radius: 70px;
- /* padding: 1%;*/
-  width: 30%;
+  width: 25%;
+  padding: .5%;
+  font-size: 12px;
+}
+button:hover {
+  background-color: #DD1972;
 }
 .disabled {
   opacity: 0.6;
@@ -101,8 +118,8 @@ button {
 #update {
   margin-bottom: 10%;
   margin-right: 20%;
-  width: 100%;
-  /*flex: 1;*/  
+  width: 5em;
+  padding: 1%; 
 }
 
 .box-1-column1,
@@ -110,43 +127,67 @@ button {
 .box-1-colunn3{
   flex: 1;
   margin-bottom: 2%;
+  width: auto;
 }
 .box2 {
-  background-color: #ffffff;
   height: 55%;
-  margin: 5%;
   width: 75%;
-  border: solid 1px #EAEAEA;
+}
+.box-2-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.box-2-row1,
+.box-2-row2 {
+  height: auto;
+  width: auto;
+  margin: 2%;
+  flex: 1;
+}
+/*#guess1,
+#guess2 {
+  width: 40%;
+  display: inline-block;
+}*/
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex: 1;
 }
 .box3 {
-  background-color: #ffffff;
-  border: solid 1px #EAEAEA;
   height: 35%;
-  margin: 5%;
+  margin-top: 2%;
   width: 75%;
 }
 .current-guess-1,
 .current-guess-2 {
   display: inline-block;
   width: 42%;
-}
-.current-guess-1 {
-  border-right: solid 1px;
-  border-color: #646464;
-}
+ }
+ .current-guess-2 {
+  border-left: solid 2px;
+  border-color: #d0d2d3;
+  padding-left: 2%;
+ }
 .results {
   color:#DD1972;
   font-size: 50px;
   padding: 0;
   margin: -1px;
   margin-bottom: 2%;
-
 }
+/*.results-border {
+  border-left: solid 2px;
+  border-color: #d0d2d3;
+  height: 100%;
+}*/
 .section2 {
  display: flex;
-  height: 100vh;
-  background-color: #D1D2D4;
-  flex: 1;
+ height: auto;
+ background-color: #D1D2D4;
+ flex: 1;
+ flex-direction: column;
 }
 .box4 {
   width: 95%;
@@ -154,29 +195,161 @@ button {
   background-color: #F7F7F7;
   display: block;
   height: 30%;
-  margin: 15px;
+  margin: 5%;
   text-align: center;
   text-transform: uppercase;
   color: #646464;
 }
-
-hr .box4 {
-  width: 95%;
+/*span .hr-line {
+  border-color: #d0d2d3;
+  border-top: solid 1px;
+  width: 70%;
   color: #646464;
-}
-
+}*/
 #close {
   border-radius: 50%;
-  height: 3em;
+  height: 2em;
   float: right;
-  width: 3em;
+  width: 2em;
 }
-
 .hidden {
   display: none;
+}
+form .error {
+  color: #DD1972;
+}
+
+/* begin media query breakpoints */
+
+@media screen and (max-width: 980px) {
+
+  header h1 {
+    font-size: 60px;
+  }
+  .box {
+    margin: 2%;
+  }
+ .box1{
+    height: auto;
+  }
+  .box-1-column1,
+  .box-1-column2,
+  .box-1-colunn3 {
+    height: auto;
+    width: auto;
+  }
+
+  #minrangeinput,
+  #maxrangeinput {
+    width: 80%;
+  }
+  #update {
+    width: 120%;
+    margin-left: -15%;
+    margin-bottom: 40%;
+  }
+  .box2 {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .input-box {
+    display: block;
+    width: 90%;
+  }
+  .box-2-content {
+    width: 95%;
+}
+  .button-container {
+    top: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  button {
+    padding: 2%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 750px ) {
+  body {
+    font-family: Open Sans, sans-serif;
+    color: #646464;
+  }
+  header h1 {
+    font-size: 3em;
+  }
+ .content{
+  flex-direction: column;
+  justify-content: center;
+  } 
+  .section1,
+  .section2{
+    width: 100%;
+  }
+  .box {
+    width: 95%;
+    font-size: 1.5em;
+  }
+  .box1 {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  }
+   .box-1-column1,
+  .box-1-column2,
+  .box-1-column3 {
+    width: 85%;
+  }
+  #minrangeinput,
+  #maxrangeinput {
+    height: 30%;
+  }
+  #update {
+    width: 50%;
+    margin: 0;
+    font-size: 1em;
+    float: left;
+  }
+  .button-container {
+    flex-direction: column;
+  }
+  button {
+    font-size: 1em;
+  }
+  .box3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .current-guess-1,
+  .current-guess-2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+  }
+  .current-guess-2 {
+  border-top: solid 2px;
+  border-color: #d0d2d3;
+  border-left: none;
+  }
 
 }
 
-form .error {
-  color: #DD1972;
+@media screen and (max-width: 450px) {
+  header h1 {
+    font-size: 2em;
+  }
+  .subtitle {
+    font-size: .8em;
+  }
+  .current-guess-1,
+  .current-guess-2 {
+    font-size: 1.5em;
+  }
+  .results {
+    font-size: 3em;
+  }
 }
