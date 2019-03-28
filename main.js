@@ -18,6 +18,7 @@ var randomNum = 0;
 
 var clearButton = document.querySelector("#clear");
 var resetButton = document.querySelector("#reset");
+var closeButton = document.querySelector("#close")
 
 var challengerOneResults = document.querySelector("#challenger-1-results");
 var challengerTwoResults = document.querySelector("#challenger-2-results");
@@ -25,7 +26,7 @@ var winnerCardContainer = document.querySelector(".section2")
 
 var cardName1 = document.querySelector("#challenger1-name");
 var cardName2 = document.querySelector("#challenger2-name");
-// var closeButton = document.querySelector("#close");
+
 
 var changeMinRange = 1;
 var changeMaxRange = 100;
@@ -94,6 +95,7 @@ clearButton.addEventListener("click", function() {
 
 // closeButton.addEventListener("click", function () {
 // });
+
 //functions to reset and clear, called in above event listeners ^//
 function resetGame() {
 	clearGame();
@@ -131,6 +133,6 @@ function getRandomNumSecret(min, max) {
 function updateMinMaxRange() {
   var reduceMinNum = minRange.innerHTML
   var increaseMaxNum = maxRange.innerHTML
-  reduceMinNum = parseInt(minRange.innerHTML) - 10
-  increaseMaxNum = parseInt(minRange.innerHTML) +10
+  minRange.innerHTML= parseInt(reduceMinNum) - 10
+  maxRange.innerHTML = parseInt(increaseMaxNum) +10
 }
